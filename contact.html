@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="loginCSS.css"></link>
+</head>
+<body>
+	<div class="navbar">
+		<img src="logo3.png">
+		<ul>
+			<li class=""><a href="index.html">Home</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="menu.html">Menu</a></li>
+			<li><a href="login.html">Contact</a></li>
+		</ul>
+	</div>
+		<div class="login-box">
+		
+		<form name="jarvis">
+				<p>Username: </p>
+				<input type="text" name="username" placeholder="Enter Username">
+				<p>Password: </p>
+				<input type="password" name="password" placeholder="Enter Password">
+				<p><input type="button" value="LogIn" onclick="login()"></p>
+		</form>
+	</div>
+	<script>
+		function login()
+		{
+			var a=document.forms["jarvis"]["username"].value;
+			var b=document.forms["jarvis"]["password"].value;
+			
+		if(a=="tonystark") 
+			{
+				if(b=="imironman")
+				{
+					alert("LOGIN CONFIRM");
+				}
+				else
+				{
+					alert("INVALID USERNAME AND PASSWORD");
+				}
+			}
+		else
+			{
+				alert("INVALID USERNAME AND PASSWORD");
+			}
+		}
+	</script>
+</body>
+</html>

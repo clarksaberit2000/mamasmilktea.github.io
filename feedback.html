@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feed Back</title>
+	<link rel="stylesheet" type="text/css" href="feedbackCSS.css">
+</head>
+<body>
+	<div class="main">
+		<div class="navbar">
+			<img src="logo3.png">
+			<ul>
+				<li class=""><a href="index.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="feedback.html">Feed back</a></li>
+			</ul>
+		</div>
+		<div>
+			<form name="feedbackForm" action="index.html" onsubmit="return validateform()">
+				<fieldset><legend><h2>Feedback Form</h2></legend>
+				<h3>Email:</h3>
+				<input type="text" name="email" placeholder="Enter Valid Email">
+				<br>
+				<h3>Subject</h3>
+				<input type="text" name="subject" placeholder="Enter topic/subject">
+				<br>
+				<textarea name="comment"></textarea>	
+				<br>
+				<input type="submit" name="submit" value="register">		
+				</fieldset>
+			</form>
+			<script> 				
+				function validateform() { 
+
+				var x=document.feedbackForm.email.value; 
+				var atposition=x.indexOf("@"); 
+				var dotposition=x.lastIndexOf("."); 
+				var subject=document.feedbackForm.subject.value; 
+				var comment=document.feedbackForm.comment.value; 	
+	
+						 if (subject==null || subject=="")
+					{   
+						alert("subject can't be blank");   
+						return false; 
+					}
+						else if(comment==null || comment=="")
+					{   
+						alert("comment must be filled.");  
+						return false; 
+  					}
+						else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+					{   
+						alert("Please enter a valid e-mail address !");
+						return false;   
+					}
+						else
+					{         
+						alert("The feedback is sentThank you for your time!");
+						return true;
+					}
+				 }
+			</script> 
+		</div>
+	</div>
+</body>
+</html>
